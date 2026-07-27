@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class SalaryTransformation {
+    public static void main(String[] args) {
+        // Input directly in code
+        int N = 5;
+        int[] salaries = {1000, 2000, 3000, 4000, 5000};
+
+        // Increase each salary by 10%
+        for (int i = 0; i < N; i++) {
+            salaries[i] = (int)(salaries[i] *1.10);
+        }
+
+        // Print updated salaries
+        for (int i = 0; i < N; i++) {
+            System.out.print(salaries[i] + " ");
+        }
+    }
+}
