@@ -1,0 +1,16 @@
+import java.util.function.Function;
+public class HighorderFunctionExample{
+    public static void processOrder(double order , Function<Double, Double> operation){
+        double result=operation.apply(order);
+        System.out.println("Updated Salary:" + result);
+    }
+        public static void main(String[] args){
+            double order=40000;
+            //Increse order by 10%
+           processOrder(order,o -> o+(o*0.10));
+            //Add bonus of 300
+             processOrder(order,o -> o + 5000);
+             //Detect 10% tax
+              processOrder(order,o -> o-(o*0.10));
+        }
+    }
